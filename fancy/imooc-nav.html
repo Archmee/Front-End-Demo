@@ -19,48 +19,37 @@
 			background: #eee url(http://img.mukewang.com/57c6356b0001461e12000460.jpg) no-repeat top left;
 		}
 		ul {
+            position: relative;
 			padding-top: 6px;
 			width: 244px;
-			
 			background-color: rgba(35,35,35, 0.5);
-			
 			list-style-type: none;
 		}
 		li {
 			height: 63px;
-			margin: 0 24px;
+			padding: 0 24px;
 			line-height: 63px;
-			
-			border-bottom: 1px solid #555;
-
-			position: relative;
 		}
-		li:last-child {
-			border-bottom: none;
-		}
+        li:hover {
+            background-color: rgba(7,17,27, 0.8);
+        }
 		a {
 			outline: 0;
 			text-decoration: none;
 		}
 		li > a {
-			/*display: inline-block;*/
+			display: inline-block;
 			width: 180px; /*196+24+24*/
 			height: 100%;
-
 			color: #fff;
-			
-
-			position: absolute;
-			left: -24px;
-			padding: 0 32px;
+            border-bottom: 1px solid #555;
 		}
-		li > a:hover {
-			background-color: rgba(7,17,27, 0.8);
-		}
+        li:last-child > a {
+            border-bottom: none;
+        }
 
-		li > i {
-			position: absolute;
-			right: 0;
+		li i {
+			float: right;
 
 			font-size: 16px;
 			font-style: normal;
@@ -74,8 +63,8 @@
 
 			display: none;
     		position: absolute;
-    		/*top: -6px;*/
-    		left: 220px;
+    		top: 0;
+    		left: 244px;
     		z-index: 5;
 
 			font-size: 14px;
@@ -86,29 +75,6 @@
 		li:hover div {
 			display: block;
 		}
-		/*如果不用js的话，就可以这样分别给每个绝对定位的div不同的top位置就好了*/
-		li:nth-of-type(1) div {
-			top: -6px;
-		}
-		li:nth-of-type(2) div {
-			top: -70px;
-		}
-		li:nth-of-type(3) div {
-			top: -134px;
-		}
-		li:nth-of-type(4) div {
-			top: -198px;
-		}
-		li:nth-of-type(5) div {
-			top: -262px;
-		}
-		li:nth-of-type(6) div {
-			top: -326px;
-		}
-		li:nth-of-type(7) div {
-			top: -390px;
-		}
-
 
 		li div h3 {
 			font-size: 16px;
@@ -130,7 +96,7 @@
 <body>
 	<div class="wrap">
 		<ul>
-			<li><a href="#">前端开发</a><i>&gt;</i>
+			<li><a href="#">前端开发<i>&gt;</i></a>
 				<div>
 					<h3>分类目录</h3>
 					<span>基础：</span> <a href="#">HTML/CSS</a> / <a href="#">JavaScript</a> / <a href="#">jQuery</a><br>
@@ -142,7 +108,7 @@
 					<a href="#">课程 | 信息排列效果</a>
 				</div>
 			</li>
-			<li><a href="#">后端开发</a><i>&gt;</i>
+			<li><a href="#">后端开发<i>&gt;</i></a>
 				<div>
 					<h3>分类目录</h3>
 					<span>基础：</span><a href="">PHP</a> / <a href="">Java</a>/ <a href="">Python</a> /<a href="">C </a> / <a href="">C++</a> / <a href="">Go</a> / <a href="">C#</a>
@@ -152,7 +118,7 @@
 					<a href="#">课程 | 信息排列效果</a>
 				</div>
 			</li>
-			<li><a href="#">移动开发</a><i>&gt;</i>
+			<li><a href="#">移动开发<i>&gt;</i></a>
 				<div>
 					<h3>分类目录</h3>
 					<span>进阶：</span> <a href="#">Html5</a> / <a href="#">CSS3</a> / <a href="#">Node.js</a> / <a href="#">AngularJS</a> / <a href="#">Bootstrap</a> / <a href="#">React</a> / <a href="#">Sass/Less</a> / <a href="#">Vue.js</a> / <a href="#">WebApp</a><br>
@@ -163,7 +129,7 @@
 					<a href="#">课程 | 信息排列效果</a>
 				</div>
 			</li>
-			<li><a href="#">数据库</a><i>&gt;</i>
+			<li><a href="#">数据库<i>&gt;</i></a>
 				<div>
 					<h3>分类目录</h3>
 					<span>其它：</span><a href="#">前端工具</a><br>
@@ -173,7 +139,7 @@
 					<a href="#">课程 | 信息排列效果</a>
 				</div>
 			</li>
-			<li><a href="#">云计算&amp;大数据</a><i>&gt;</i>
+			<li><a href="#">云计算&amp;大数据<i>&gt;</i></a>
 				<div>
 					<h3>分类目录</h3>
 					<span>基础：</span> <a href="#">HTML/CSS</a> / <a href="#">JavaScript</a> / <a href="#">jQuery</a><br>
@@ -185,7 +151,7 @@
 					<a href="#">课程 | 信息排列效果</a>
 				</div>
 			</li>
-			<li><a href="#">运维&amp;测试</a><i>&gt;</i>
+			<li><a href="#">运维&amp;测试<i>&gt;</i></a>
 				<div>
 					<h3>分类目录</h3>
 					<span>基础：</span> <a href="#">HTML/CSS</a> / <a href="#">JavaScript</a> / <a href="#">jQuery</a><br>
@@ -197,7 +163,7 @@
 					<a href="#">课程 | 信息排列效果</a>
 				</div>
 			</li>
-			<li><a href="#">视觉设计</a><i>&gt;</i>
+			<li><a href="#">视觉设计<i>&gt;</i></a>
 				<div>
 					<h3>分类目录</h3>
 					<span>基础：</span> <a href="#">HTML/CSS</a> / <a href="#">JavaScript</a> / <a href="#">jQuery</a><br>
@@ -211,12 +177,5 @@
 			</li>
 		</ul>
 	</div>
-	<script>
-		// var oList = document.getElementsByTagName('li');
-
-		// for (var i = 0; i < oList.length; i++) {
-		// 	oList[i].children[2].style.top = -6-i*64+'px';
-		// }
-	</script>
 </body>
 </html>
