@@ -9,20 +9,20 @@
 			overflow: hidden;
 		}
 		#box {
-			width: 3000px;
-			height: 676px;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
 		}
 		a {
 			height: 100%;
 			width: 100px;
 			overflow: hidden;
 			float: left;
-		}
-		a:last-child {
-			width: 79%;
+			border-right: 1px solid #fff;
+			box-sizing: border-box;
 		}
 		img {
-			width: 1066px;
+			display: block;
 			height: 100%;
 			vertical-align: middle;
 		}
@@ -30,17 +30,18 @@
 </head>
 <body>
 	<div id="box">
-		<a href="#"><img src="http://www.canda.cn/media/dm/lp_img/2016/1117/men/lookbook-men_10.jpg" alt="fantasy"></a>
-		<a href="#"><img src="http://www.canda.cn/media/dm/lp_img/2016/1117/women/women_06.jpg" alt="fantasy"></a>
-		<a href="#"><img src="http://www.canda.cn/media/dm/lp_img/2016/1117/men/lookbook-men_11.jpg" alt="fantasy"></a>
-		<a href="#"><img src="http://www.canda.cn/media/dm/lp_img/2016/1117/women/lookbook-women_04.jpg" alt="fantasy"></a>
+		<a href="#"><img src="http://7xp981.com1.z0.glb.clouddn.com/home20170330/PC_KV2.jpg" alt="fantasy"></a>
+		<a href="#"><img src="http://7xp981.com1.z0.glb.clouddn.com/home20170330/PC_KV3.jpg" alt="fantasy"></a>
+		<a href="#"><img src="http://7xp981.com1.z0.glb.clouddn.com/home20170421/kv-pc-04.jpg" alt="fantasy"></a>
+		<a href="#"><img src="http://7xp981.com1.z0.glb.clouddn.com/home20170330/pc_kv01.jpg" alt="fantasy"></a>
 	</div>
-	<script src="js/move.js"></script>
+	<script src="move.js"></script>
 	<script>
 		window.onload = function () {
-			var imgs = document.images;
 			var box = document.getElementById('box');
 			var last = box.children[box.children.length - 1];
+			var innerW = window.innerWidth;
+			last.style.width =(innerW - 300) + 'px';
 
 			document.onmouseover = function(event) {
 				var e = event || window.event,
@@ -52,10 +53,9 @@
 					return;
 				}
 
-				var imgW = getStyle(target, 'width');
 				startMove(last, {width: 100});
-				startMove(target.parentNode, {width: imgW});
-				
+				startMove(target.parentNode, {width: innerW-3*100});
+
 				last = target.parentNode;
 			}
 		}
